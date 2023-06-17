@@ -14,19 +14,20 @@ function lock_loja() {
     ));
 }
    function callback_lock($request){
-	   $key = sanitize_key($request['chave']);
+	   $key = $request['chave'];
+	   $key= urldecode($key);
 		if (metadata_exists('term', 1, 'bring_key')){
 			if (strtoupper(get_term_meta(1,'bring_key',true)) == strtoupper($key)){
 				update_term_meta( 1, 'bring_status', 'true' );
-				return "Painel Bloqueado";
+				return esc_html("Painel Bloqueado");
 			}else{
-			return "Painel nao bloqueado, chave incorreta";
+			return esc_html("Painel nao bloqueado, chave incorreta");
 			}
 		}else{
 			// se não existe, criando uma nova META
 		add_term_meta(1,'bring_key','chaveteste'); //string KEY
 		add_term_meta(1,'bring_status','false'); // Key Status Lock
-			return "Chave meta criada";
+			return esc_html("Chave meta criada");
 		}
    }
 }
@@ -44,19 +45,20 @@ function unlock_loja() {
     ));
 }
    function callback_unlock($request){
-	   $key = sanitize_key($request['chave']);
+	   $key = $request['chave'];
+	   $key= urldecode($key);
 		if (metadata_exists('term', 1, 'bring_key')){
 			if (strtoupper(get_term_meta(1,'bring_key',true)) == strtoupper($key)){
 				update_term_meta( 1, 'bring_status', 'false' );
-				return "Painel Desbloqueado";
+				return esc_html("Painel Desbloqueado");
 			}else{
-			return "Painel nao desbloqueado, chave incorreta";
+			return esc_html("Painel nao desbloqueado, chave incorreta");
 			}
 		}else{
 			// se não existe, criando uma nova META
 		add_term_meta(1,'bring_key','chaveteste'); //string KEY
 		add_term_meta(1,'bring_status','false'); // Key Status Lock
-			return "Chave meta criada";
+			return esc_html("Chave meta criada");
 		}
    }
 }
