@@ -1,12 +1,12 @@
 
-# **Bring Lock**
+# **wp-lock-panel**
 
 ## Short Description 
 
 Bring Lock is a plugin that locks the admin panel through API requests
 
 
-[Bring Lock](https://br.wordpress.org/plugins/bring-lock) was developed with the sole and exclusive purpose of blocking the Wordpress Admin Panel so that no other user can log in, not even the site administrator. Blocking occurs when a request is made to the Plugin's API along with the token configured on the panel.
+[wp-lock-panel](https://br.wordpress.org/plugins/wp-lock-panel) was developed with the sole and exclusive purpose of blocking the Wordpress Admin Panel so that no other user can log in, not even the site administrator. Blocking occurs when a request is made to the Plugin's API along with the token configured on the panel.
 
 **Features**
 
@@ -14,7 +14,7 @@ Bring Lock is a plugin that locks the admin panel through API requests
 * **Unlock admin panel**
 
 ## **Contact**
-Don't forget, in case of any problems or upcoming questions feel free to contact us via e-mail **boteistem@gmail.com** or via [FREE SUPPORT FORUM](https://wordpress.org/support/plugin/bring-lock).
+Don't forget, in case of any problems or upcoming questions feel free to contact us via e-mail **boteistem@gmail.com** or via [FREE SUPPORT FORUM](https://wordpress.org/support/plugin/wp-lock-panel).
 
 
 ## **Installation**
@@ -41,11 +41,11 @@ There are two ways to install Bring Lock: the easy way, when you install Bring L
 
 ### Lock:
 
-To lock the Panel through the api, use the following EndPoint **{website link}**/wp-json/lock-woo/lock/**{password}**/
+To lock the Panel through the api, use the following EndPoint **{website link}**/wp-json/wlplock/lock/**{password}**/
 
 ### Unlock
 
-To unlock the Panel through the api, use the following EndPoint  **{website link}**/wp-json/lock-woo/unlock/**{password}**/
+To unlock the Panel through the api, use the following EndPoint  **{website link}**/wp-json/wlplock/unlock/**{password}**/
 
 
 ## **Changelog**
