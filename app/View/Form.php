@@ -56,7 +56,7 @@ class Form
             'Chave',
             function(){
                 ?>
-                 <input type="text" id="wp-lock-panelkey" name="wp-lock-panelkey" value="<?= $this->config->getKey(); ?>" required>
+                 <input type="text" id="wp-lock-panelkey" name="wp-lock-panelkey" value="<?php echo esc_html($this->config->getKey()); ?>" required>
                 <?php
             },
             self::SLUG,
