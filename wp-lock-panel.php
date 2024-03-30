@@ -7,7 +7,7 @@
  * Plugin Name:       WP Local Panel
  * Plugin URI:        https://wa.me/5518997479949
  * Description:       Plugin to block administrative panel through API calls.
- * Version:           1.0.0
+ * Version:           1.5.0
  * Author:            Bruno Alves
  * Author URI:        https://github.com/Cyber-Root0
  * Text Domain:       wp-lock-panel
