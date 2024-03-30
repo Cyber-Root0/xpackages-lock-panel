@@ -1,0 +1,18 @@
+{
+    "name": "cyber-root0/wp-lock-panel",
+    "description": "Plugin to block administrative panel through API calls.",
+    "type": "plugin",
+    "license": "Free",
+    "autoload": {
+        "psr-4": {
+            "CyberRoot0\\WpLockPanel\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bruno Alves",
+            "email": "boteistem@gmail.com"
+        }
+    ],
+    "require": {}
+}

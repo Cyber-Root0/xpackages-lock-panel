@@ -1,34 +1,23 @@
 <?php
 /*
  
- * @package           BringLock
+ * @package           WP Lock Panel
  * @author            Bruno Alves
- * @copyright         2023  - Bring E-commerce
- * Plugin Name:       Bring Lock
- * Plugin URI:        https://bring.com.br
- * Description:       Plugin da Bring E-commerce, bloqueio automático de lojas com pagamentos pendentes.
- * Version:           1.0.1
+ * @copyright         2024  - Bruno Alves
+ * Plugin Name:       WP Local Panel
+ * Plugin URI:        https://wa.me/5518997479949
+ * Description:       Plugin to block administrative panel through API calls.
+ * Version:           1.0.0
  * Author:            Bruno Alves
  * Author URI:        https://github.com/Cyber-Root0
- * Text Domain:       bring-lock
+ * Text Domain:       wp-lock-panel
 
 */
 if (!defined('ABSPATH')){
     die;
 }
-require_once plugin_dir_path(__FILE__).'/includes/front.php';
-require_once plugin_dir_path(__FILE__).'/includes/back.php';
-
-
-// SCRIPTS SWEET ALERT __> Alert Beautiful
-function bring_lock_sweet_alert() {
-     
-    wp_enqueue_script( 'admin-js-sweetalert', plugin_dir_url( __FILE__ ).'includes/js/sweetalert2.all.min.js',false);
-    wp_enqueue_script( 'admin-js-bring-lock', plugin_dir_url( __FILE__ ).'includes/js/bring-lock.js',false);
-    wp_enqueue_style( 'admin-js-sweetalert-css', plugin_dir_url( __FILE__ ).'includes/css/sweetalert2.min.css',false);
-
-}
-      
-add_action( 'login_enqueue_scripts', 'bring_lock_sweet_alert' );
-
-?>
+require_once(__DIR__.'/vendor/autoload.php');
+$url = plugin_dir_url(__FILE__);
+define('WLP_ROOT_URL',$url);
+use CyberRoot0\WpLockPanel\Init;
+add_action('plugins_loaded', array(Init::class, 'getInstance'));
